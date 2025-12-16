@@ -5,29 +5,50 @@
 <title>رسالة من قلبي</title>
 <style>
 body{
-  font-family:Arial;
-  background:#fdeff2;
-  text-align:center;
-  padding:40px;
+  font-family: Arial, sans-serif;
+  background: #fdeff2;
+  text-align: center;
+  padding: 40px;
+}
+button#playMusic{
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #ff5c8a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
 .box{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  max-width:500px;
-  margin:auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
 }
 </style>
 </head>
 <body>
 
-<!-- الأغنية تعمل هنا -->
-<audio autoplay loop>
+<h2>جومانا ❤️</h2>
+
+<!-- زر تشغيل الموسيقى -->
+<button id="playMusic" onclick="playMusic()">دوس هنا الأول 🎵</button>
+
+<!-- الموسيقى -->
+<audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+function playMusic(){
+  document.getElementById('bgMusic').play();
+  document.getElementById('playMusic').style.display = 'none'; // يخفي الزر بعد التشغيل
+}
+</script>
+
 <div class="box">
-<h2>جومانا ❤️</h2>
 <p>
 رغم علمي القليل جدا بلغات البرمجة ورغم ان الفكره صعبة جدا في تفيزها بس شفت انها اكتر طريقة ممكن اعبر بيها عن حبي واعتذاري ليكي.  
 أنا آسف يا جومانا انا بحبك من قلبي والله ومش هقدر استغني عنك في يوم زي ما انا مقدرتش قبل كده .  
