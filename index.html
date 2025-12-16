@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لجومانا فقط 💌</title>
+<style>
+body{
+  font-family: Arial;
+  background: pink;
+  text-align:center;
+  padding-top:100px;
+}
+.box{
+  background:white;
+  width:300px;
+  margin:auto;
+  padding:25px;
+  border-radius:15px;
+}
+input,button{
+  padding:10px;
+  width:80%;
+  margin:10px 0;
+}
+button{
+  background:#ff5c8a;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>🔒 دخول خاص</h2>
+  <input type="password" id="pass" placeholder="كلمة السر">
+  <button onclick="go()">دخول</button>
+</div>
+
+<script>
+function go(){
+  if(document.getElementById("pass").value === "11/3/2025"){
+    window.location.href="memories.html";
+  }else{
+    alert("كلمة السر غلط");
+  }
+}
+</script>
+
+</body>
+</html>
