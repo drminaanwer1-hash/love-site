@@ -9,9 +9,19 @@ body{
   background-color: #fff0f5;
   text-align: center;
 }
+button#playMusic{
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #ff5c8a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
 figure{
-  display: block;      /* هنا التغيير */
-  margin: 20px auto;   /* يوسّط الصور والفيديوهات */
+  display: block;
+  margin: 20px auto;
 }
 img, video{
   width: 90%;
@@ -40,10 +50,20 @@ a{
 
 <h2>ذكرياتنا 💖</h2>
 
-<!-- أغنية هادية -->
-<audio autoplay loop>
+<!-- زر تشغيل الموسيقى -->
+<button id="playMusic" onclick="playMusic()">دوس هنا الأول 🎵</button>
+
+<!-- الموسيقى -->
+<audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+function playMusic(){
+  document.getElementById('bgMusic').play();
+  document.getElementById('playMusic').style.display = 'none'; // يخفي الزر بعد التشغيل
+}
+</script>
 
 <!-- 9 صور مع كلام -->
 <figure>
@@ -68,12 +88,12 @@ a{
 
 <figure>
   <img src="img5.jpg" alt="ذكرى 5">
-  <figcaption> اول مره اكل من ايدك 💕</figcaption>
+  <figcaption>وانتي بتبضني عليا😁</figcaption>
 </figure>
 
 <figure>
   <img src="img6.jpg" alt="ذكرى 6">
-  <figcaption>وانتي بتبضني عليا😁</figcaption>
+  <figcaption>اول مره اكل من ايدك 💕</figcaption>
 </figure>
 
 <figure>
@@ -112,4 +132,4 @@ a{
 <a href="apology.html">💌 رسالة خاصة</a>
 
 </body>
-</html>
+</html
